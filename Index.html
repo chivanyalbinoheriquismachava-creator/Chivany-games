@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposição de Jogos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🎮 Chivany Games</div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Jogos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <h1>Exposição de Jogos</h1>
+        <p>Descubra os melhores jogos do momento</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Jogo 1 -->
+        <div class="game-card">
+            <img src="images/categories-02.jpg" alt="Jogo 1">
+            <div class="game-info">
+                <h2>Dota 2</h2>
+                <p class="short">Dota 2 é um jogo eletrônico do gênero multiplayer online battle arena desenvolvido e publicado pela Valve.</p>
+                <p class="more">Lançado em 2013, é sequência de Defense of the Ancients, uma modificação criada para Warcraft III. Hoje é um dos principais jogos de eSports do mundo.</p>
+                <a href="#" class="toggle">Ver mais</a>
+            </div>
+        </div>
+
+        <!-- Jogo 2 -->
+        <div class="game-card">
+            <img src="images/banner-image.jpg" alt="Jogo 2">
+            <div class="game-info">
+                <h2>FIFA 23</h2>
+                <p class="short">FIFA 23 é um jogo eletrônico de simulação de futebol desenvolvido pela EA Sports.</p>
+                <p class="more">Foi lançado em 2022, sendo o último com o nome FIFA. Está disponível para múltiplas plataformas com gráficos e física de última geração.</p>
+                <a href="#" class="toggle">Ver mais</a>
+            </div>
+        </div>
+
+        <!-- Jogo 3 -->
+        <div class="game-card">
+            <img src="images/Nba2k26.jpg" alt="Jogo 3">
+            <div class="game-info">
+                <h2>NBA 2K26</h2>
+                <p class="short">O NBA 2K26 junta jogadores da NBA e WNBA no modo MyTEAM.</p>
+                <p class="more">Coleciona cartas, forma times mistos e compete em novas arenas. Além disso, traz modos inéditos como All-Star Team-Up.</p>
+                <a href="#" class="toggle">Ver mais</a>
+            </div>
+        </div>
+
+        <!-- Você pode repetir a mesma estrutura para os outros jogos -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Chivany Games.</p>
+    </footer>
+
+    <script>
+        // Script para alternar o "Ver mais"
+        document.querySelectorAll('.toggle').forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+                const card = btn.closest('.game-card');
+                card.classList.toggle('expanded');
+                btn.textContent = card.classList.contains('expanded') ? "Ver menos" : "Ver mais";
+            });
+        });
+    </script>
+
+</body>
+</html>
